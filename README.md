@@ -1,7 +1,25 @@
-very simple wiki tools.
+my personal-knowledge tools
 =======================
+simplified version of @sirupsen [[zk]](https://github.com/sirupsen/zk) projects
+
+simple shell script for manage my personal-knowledge wiki.
+
 
 ### how it works?
-cd into your wiki directory
+  - find, search all markdown file in current directory
 
-start there
+### tools used in this project
+  - awk
+  - cat
+  - fd
+  - find
+  - fzf
+  - grep
+  - ripgrep
+  - skim
+
+### install
+  - use Makefile
+
+### status
+  - still in development mode
