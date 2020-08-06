@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+wiki-tag-raw | fzf --height 100% --no-multi \
+  --bind "ctrl-y:execute-silent(echo {2} | pbcopy),enter:execute[ \
+    grep -F --color=always -i {2} ./*.md -l | \
+      fzf --ansi --height 100% --preview-window=top:65% \
+        --bind 'enter:execute$ \
+          $EDITOR \{} < /dev/tty \
+        $' \
+        --preview 'cat \{}' \
+  ]"

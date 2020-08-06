@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+# # using xargs
+# fd -IH -ap --type f --extension md . ./ | sk | xargs sh -c '$EDITOR -- "$@" <$0' /dev/tty
+
+# # using command substitution
+# $EDITOR $(fd -IH -ap --type f --extension md . ./ | sk )
+
+# # 
+$EDITOR $(rg . | fzf | cut -d : -f 1)

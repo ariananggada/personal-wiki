@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+# if no args, do search note
+if [[ -z $1 ]]; then
+  wiki-search
+# if given args, args as note filename
+else
+  args="$@"
+  $EDITOR "./$args.md"
+fi

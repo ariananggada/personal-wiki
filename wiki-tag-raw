@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+rg -o "#[\w\-_]{3,}" -t md -N --no-filename "./" |
+  rg -v "^#(notes-|import-)" | \
+  awk ' { tot[$0]++ } END { for (i in tot) print tot[i], "\t", i } ' | \
+  sort -r --numeric-sort
