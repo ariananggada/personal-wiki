@@ -7,4 +7,4 @@
 # $EDITOR $(fd -IH -ap --type f --extension md . ./ | sk )
 
 # # 
-$EDITOR $(rg . | fzf | cut -d : -f 1)
+$EDITOR $(rg --column --line-number -t md . | fzf | cut -d : -f 1)
