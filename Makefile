@@ -1,4 +1,4 @@
-PREFIX = /usr/local
+PREFIX = ${HOME}
 
 install:
 	@echo installing executable file to ${DESTDIR}${PREFIX}/bin
